@@ -1,9 +1,13 @@
 import React from 'react';
 
+import Layout from './components/Layout/Layout';
+
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <Layout>
+        <p>Test</p>
+      </Layout>
     </div>
   );
 }
