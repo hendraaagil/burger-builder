@@ -31,21 +31,25 @@
 .BuildControl .Less {
   background-color: #d39952;
   color: #fff;
+  transition: all 0.3s;
 }
 
 .BuildControl .More {
   background-color: #8f5e1e;
   color: #fff;
+  transition: all 0.3s;
 }
 
 .BuildControl .Less:hover,
 .BuildControl .Less:active {
   background-color: #daa972;
   color: #fff;
+  transform: scale(0.9);
 }
 
 .BuildControl .More:hover,
 .BuildControl .More:active {
   background-color: #99703f;
   color: #fff;
+  transform: scale(0.9);
 }
