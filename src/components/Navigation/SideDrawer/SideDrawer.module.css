@@ -9,7 +9,7 @@
   max-width: 70%;
   height: 100%;
   background-color: #fff;
-  transition: all 0.3 ease-out;
+  transition: all 0.3s ease-out;
 }
 
 @media (min-width: 500px) {
