@@ -82,6 +82,10 @@ class BurgerBuilder extends Component {
     this.setState({ showModal: false });
   };
 
+  orderHandler = () => {
+    alert('You have successfully order!');
+  };
+
   render() {
     const disabledInfo = {
       ...this.state.ingredients,
@@ -94,7 +98,11 @@ class BurgerBuilder extends Component {
     return (
       <Auxillary>
         <Modal show={this.state.showModal} modalClosed={this.closeModalHandler}>
-          <OrderSummary ingredients={this.state.ingredients} />
+          <OrderSummary
+            ingredients={this.state.ingredients}
+            modalClosed={this.closeModalHandler}
+            order={this.orderHandler}
+          />
         </Modal>
         <Burger ingredients={this.state.ingredients} />
         <BuildControls
