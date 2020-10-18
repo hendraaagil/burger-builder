@@ -4,7 +4,7 @@ import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 import Burger from '../../components/Burger/Burger';
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 import Modal from '../../components/UI/Modal/Modal';
-import Auxillary from '../../hoc/Auxillary';
+import Auxillary from '../../hoc/Auxillary/Auxillary';
 
 const INGREDIENT_PRICES = {
   salad: 0.5,

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Auxillary from '../../../hoc/Auxillary';
+import Auxillary from '../../../hoc/Auxillary/Auxillary';
 import Logo from '../../Logo/Logo';
 import Backdrop from '../../UI/Backdrop/Backdrop';
 import NavItems from '../NavItems/NavItems';
