@@ -18,6 +18,8 @@ const OrderSummary = (props) => {
       <p>A delicious burger with the following ingredients:</p>
       <ul>{igSummary}</ul>
       <p>Continue to Checkout?</p>
+      <button>Cancel</button>
+      <button>Continue</button>
     </Auxillary>
   );
 };
