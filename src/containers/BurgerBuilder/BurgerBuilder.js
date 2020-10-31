@@ -27,6 +27,7 @@ class BurgerBuilder extends Component {
   };
 
   componentDidMount() {
+    console.log(this.props);
     axios
       .get('https://burger-builder-b13be.firebaseio.com/ingredients.json')
       .then((res) => {
@@ -95,31 +96,30 @@ class BurgerBuilder extends Component {
 
   orderHandler = () => {
     // alert('You have successfully order!');
-    this.setState({ loading: true });
-
-    const order = {
-      ingredients: this.state.ingredients,
-      price: this.state.totalPrice.toFixed(2),
-      customer: {
-        name: 'Hendra Agil',
-        address: {
-          street: 'Matesih 4',
-          zipCode: '57781',
-          country: 'Indonesia',
-        },
-        email: 'hendra@dev.id',
-      },
-      deliveryMethod: 'fastest',
-    };
-
-    axios
-      .post('/orders.json', order)
-      .then((res) => {
-        this.setState({ loading: false, showModal: false });
-      })
-      .catch((err) => {
-        this.setState({ loading: false, showModal: false });
-      });
+    // this.setState({ loading: true });
+    // const order = {
+    //   ingredients: this.state.ingredients,
+    //   price: this.state.totalPrice.toFixed(2),
+    //   customer: {
+    //     name: 'Hendra Agil',
+    //     address: {
+    //       street: 'Matesih 4',
+    //       zipCode: '57781',
+    //       country: 'Indonesia',
+    //     },
+    //     email: 'hendra@dev.id',
+    //   },
+    //   deliveryMethod: 'fastest',
+    // };
+    // axios
+    //   .post('/orders.json', order)
+    //   .then((res) => {
+    //     this.setState({ loading: false, showModal: false });
+    //   })
+    //   .catch((err) => {
+    //     this.setState({ loading: false, showModal: false });
+    //   });
+    this.props.history.push('/checkout');
   };
 
   render() {
