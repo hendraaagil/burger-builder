@@ -31,3 +31,9 @@
   background-color: #ffb1a8;
   border-bottom: 1px solid #e22424;
 }
+
+.ValidationError {
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: #e22424;
+}
