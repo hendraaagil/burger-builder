@@ -20,6 +20,7 @@ class ContactData extends Component {
           required: true,
         },
         valid: false,
+        touched: false,
       },
       street: {
         elType: 'input',
@@ -32,6 +33,7 @@ class ContactData extends Component {
           required: true,
         },
         valid: false,
+        touched: false,
       },
       zipCode: {
         elType: 'input',
@@ -46,6 +48,7 @@ class ContactData extends Component {
           maxLength: 5,
         },
         valid: false,
+        touched: false,
       },
       country: {
         elType: 'input',
@@ -58,6 +61,7 @@ class ContactData extends Component {
           required: true,
         },
         valid: false,
+        touched: false,
       },
       email: {
         elType: 'input',
@@ -70,6 +74,7 @@ class ContactData extends Component {
           required: true,
         },
         valid: false,
+        touched: false,
       },
       deliveryMethod: {
         elType: 'select',
@@ -137,6 +142,7 @@ class ContactData extends Component {
       updatedFormEl.value,
       updatedFormEl.validation
     );
+    updatedFormEl.touched = true;
     updatedOrderForm[inputId] = updatedFormEl;
     console.log(updatedFormEl);
     this.setState({ orderForm: updatedOrderForm });
@@ -161,6 +167,7 @@ class ContactData extends Component {
             value={formEl.config.value}
             invalid={!formEl.config.valid}
             shouldValidate={formEl.config.validation}
+            touched={formEl.config.touched}
             changed={(e) => this.inputChangedHandler(e, formEl.id)}
           />
         ))}
