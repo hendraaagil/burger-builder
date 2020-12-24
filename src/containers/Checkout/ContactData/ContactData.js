@@ -53,8 +53,9 @@ class ContactData extends Component {
         elType: 'select',
         elConfig: {
           options: [
-            { value: 'fastest', displayValue: 'Fastest' },
             { value: 'cheapest', displayValue: 'Cheapest' },
+            { value: 'normal', displayValue: 'Normal' },
+            { value: 'fastest', displayValue: 'Fastest' },
           ],
         },
         value: '',

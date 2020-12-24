@@ -24,6 +24,17 @@ const Input = (props) => {
         />
       );
       break;
+    case 'select':
+      inputEl = (
+        <select className={styles.InputEl} value={props.value}>
+          {props.elConfig.options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.displayValue}
+            </option>
+          ))}
+        </select>
+      );
+      break;
     default:
       inputEl = (
         <input
