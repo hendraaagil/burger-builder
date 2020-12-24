@@ -8,11 +8,57 @@ import styles from './ContactData.module.css';
 
 class ContactData extends Component {
   state = {
-    name: '',
-    email: '',
-    address: {
-      street: '',
-      postalCode: '',
+    orderForm: {
+      name: {
+        elType: 'input',
+        elConfig: {
+          type: 'text',
+          placeholder: 'Your Name',
+        },
+        value: '',
+      },
+      street: {
+        elType: 'input',
+        elConfig: {
+          type: 'text',
+          placeholder: 'Street',
+        },
+        value: '',
+      },
+      zipCode: {
+        elType: 'input',
+        elConfig: {
+          type: 'text',
+          placeholder: 'ZIP Code',
+        },
+        value: '',
+      },
+      country: {
+        elType: 'input',
+        elConfig: {
+          type: 'text',
+          placeholder: 'Country',
+        },
+        value: '',
+      },
+      email: {
+        elType: 'input',
+        elConfig: {
+          type: 'email',
+          placeholder: 'Your E-Mail',
+        },
+        value: '',
+      },
+      deliveryMethod: {
+        elType: 'select',
+        elConfig: {
+          options: [
+            { value: 'fastest', displayValue: 'Fastest' },
+            { value: 'cheapest', displayValue: 'Cheapest' },
+          ],
+        },
+        value: '',
+      },
     },
     loading: false,
   };
@@ -24,16 +70,6 @@ class ContactData extends Component {
     const order = {
       ingredients: this.props.ingredients,
       price: this.props.price,
-      customer: {
-        name: 'Hendra Agil',
-        address: {
-          street: 'Matesih 4',
-          zipCode: '57781',
-          country: 'Indonesia',
-        },
-        email: 'hendra@dev.id',
-      },
-      deliveryMethod: 'fastest',
     };
     axios
       .post('/orders.json', order)
@@ -49,12 +85,7 @@ class ContactData extends Component {
   render() {
     let form = (
       <form>
-        <Input
-          inputtype="input"
-          type="text"
-          name="name"
-          placeholder="Your Name ..."
-        />
+        <Input elType="..." elConfig="..." value="..." />
         <Input
           inputtype="input"
           type="email"
