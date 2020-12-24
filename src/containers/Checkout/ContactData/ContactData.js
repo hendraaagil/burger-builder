@@ -159,6 +159,8 @@ class ContactData extends Component {
             elType={formEl.config.elType}
             elConfig={formEl.config.elConfig}
             value={formEl.config.value}
+            invalid={!formEl.config.valid}
+            shouldValidate={formEl.config.validation}
             changed={(e) => this.inputChangedHandler(e, formEl.id)}
           />
         ))}
